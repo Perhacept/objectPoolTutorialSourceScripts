@@ -4,7 +4,7 @@ using UnityEngine;
     public abstract class PoolSO<T> : ScriptableObject, IPool<T>
     {
         //protected readonly Stack<T> Available = new Stack<T>();//栈(Stack)/队列(Queue)比list性能消耗低
-        protected readonly Queue<T> Available = new Queue<T>();//先进后出的队列
+        protected readonly Queue<T> Available = new Queue<T>();//队列
         public abstract IFactory<T> Factory { get; set; }
         protected bool HasBeenPrewarmed { get; set; }
 
